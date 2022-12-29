@@ -1,0 +1,101 @@
+id,retailer,name,quantity,price,delivery
+1,4,Wine - Lou Black Shiraz,278,11,yes
+2,4,Tea - Orange Pekoe,182,54,no
+3,4,Crackers - Trio,48,74,yes
+4,2,Corn Shoots,66,38,yes
+5,1,Cheese - Brick With Onion,419,84,yes
+6,2,Bread - Calabrese Baguette,456,46,yes
+7,5,"Soup - Canadian Pea, Dry Mix",275,81,no
+8,1,Water - Spring 1.5lit,88,50,yes
+9,4,Bar - Granola Trail Mix Fruit Nut,386,61,yes
+10,2,Crackers - Trio,456,68,yes
+11,4,Chicken - Whole Fryers,46,7,yes
+12,5,Persimmons,437,61,no
+13,5,"Liqueur Banana, Ramazzotti",485,41,yes
+14,5,Crackers - Trio,114,21,yes
+15,1,Truffle Cups Green,384,42,yes
+16,2,Bar - Granola Trail Mix Fruit Nut,457,76,yes
+17,1,Crackers - Trio,339,81,no
+18,3,Spice - Paprika,192,100,yes
+19,1,Bar - Granola Trail Mix Fruit Nut,129,53,yes
+20,1,Chicken - Whole Fryers,360,6,yes
+21,1,"Syrup - Monin, Amaretta",89,7,yes
+22,2,Chicken - Whole Fryers,153,91,no
+23,5,Bar - Granola Trail Mix Fruit Nut,18,76,yes
+24,4,"Syrup - Monin, Amaretta",202,44,yes
+25,5,Chicken - Whole Fryers,101,65,yes
+26,3,Wine - Pinot Grigio Collavini,390,60,yes
+27,1,Haggis,407,5,no
+28,1,Flour Pastry Super Fine,375,25,yes
+29,1,Spinach - Spinach Leaf,175,22,yes
+30,1,Squash - Butternut,232,3,yes
+31,4,Haggis,178,30,yes
+32,3,Muskox - French Rack,112,44,no
+33,3,Crackers - Trio,395,33,yes
+34,3,Bar - Granola Trail Mix Fruit Nut,463,40,yes
+35,3,Chicken - Whole Fryers,289,3,yes
+36,2,"Syrup - Monin, Amaretta",31,45,yes
+37,5,"Syrup - Monin, Amaretta",382,85,no
+38,1,"Syrup - Monin, Irish Cream",497,19,yes
+39,4,Flour Pastry Super Fine,173,6,yes
+40,5,Haggis,498,85,yes
+41,2,Haggis,171,4,yes
+42,5,Flour Pastry Super Fine,415,58,no
+43,2,Flour Pastry Super Fine,107,18,yes
+44,4,Spinach - Spinach Leaf,132,51,yes
+45,4,Soup - Campbells Broccoli,432,76,yes
+46,4,Sausage - Liver,247,15,yes
+47,2,Spinach - Spinach Leaf,346,40,no
+48,4,"Pork - Loin, Bone - In",415,15,yes
+49,2,Spring Roll Veg Mini,407,6,yes
+50,4,Tea - Decaf Lipton,234,61,yes
+51,2,Dr. Pepper - 355ml,342,72,yes
+52,5,Spinach - Spinach Leaf,473,44,no
+53,2,Broom And Brush Rack Black,427,95,yes
+54,4,Lime Cordial - Roses,177,76,yes
+55,4,Ham - Virginia,428,31,yes
+56,3,"Syrup - Monin, Amaretta",136,11,yes
+57,5,Bar - Granola Trail Mix Fruit Nut,39,44,no
+58,3,Haggis,314,84,yes
+59,4,Leeks - Large,480,53,yes
+60,1,Wine - Chardonnay Mondavi,467,16,yes
+61,2,Sweet Pea Sprouts,419,69,yes
+62,3,Flour Pastry Super Fine,424,64,no
+63,2,Muffin Orange Individual,167,35,yes
+64,1,Salt - Seasoned,111,100,yes
+65,4,Ginger - Crystalized,262,6,yes
+66,4,"Lemonade - Mandarin, 591 Ml",413,98,yes
+67,5,Wine - Chianti Classica Docg,198,21,no
+68,3,Spinach - Spinach Leaf,120,9,yes
+69,3,Mustard - Pommery,417,67,yes
+70,3,"Doilies - 12, Paper",410,22,yes
+71,4,Eel - Smoked,31,29,yes
+72,4,Rosemary - Fresh,174,68,no
+73,1,Jameson - Irish Whiskey,491,97,yes
+74,2,"Tart Shells - Savory, 3",432,61,yes
+75,3,Island Oasis - Raspberry,305,11,yes
+76,4,"Beans - Turtle, Black, Dry",437,8,yes
+77,3,"Fish - Halibut, Cold Smoked",81,68,no
+78,4,Vinegar - Champagne,88,21,yes
+79,5,"Wine - Red, Cabernet Sauvignon",360,21,yes
+80,2,"Beef - Cooked, Corned",106,70,yes
+81,3,Cake - French Pear Tart,18,82,yes
+82,1,Magnotta Bel Paese Red,236,74,no
+83,2,Sauce - Cranberry,263,99,yes
+84,5,Flour - Teff,105,41,yes
+85,4,Table Cloth 54x72 Colour,500,89,yes
+86,5,Quiche Assorted,478,56,yes
+87,1,Browning Caramel Glace,175,42,no
+88,1,Wine - Riesling Alsace Ac 2001,174,81,yes
+89,1,Triple Sec - Mcguinness,394,76,yes
+90,3,Wine - Domaine Boyar Royal,198,70,yes
+91,4,Shrimp - 150 - 250,139,89,yes
+92,5,Pumpkin - Seed,413,75,no
+93,4,Teriyaki Sauce,12,37,yes
+94,3,Ham - Proscuitto,242,96,yes
+95,3,Eggplant Oriental,336,7,yes
+96,4,Cocoa Butter,429,60,yes
+97,3,Pear - Asian,466,53,no
+98,2,"Loaf Pan - 2 Lb, Foil",187,43,yes
+99,3,Flour - Strong Pizza,273,79,yes
+100,1,"Tart Shells - Sweet, 2",121,3,yes
