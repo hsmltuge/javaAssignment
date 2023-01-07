@@ -6,7 +6,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Products {
-    String id, retailer, name, quality, price, delivery;
+    String id, retailer, name;
+    int quality;
+    Float minPrice, maxPrice;
+    boolean delivery;
     Database db = new Database();
 
     public List<List<String>> showProducts() {
@@ -14,11 +17,11 @@ public class Products {
         try {
             ResultSet rs = this.db.select("SELECT DISTINCT NAME FROM products");
             int i = 1;
-            System.out.println("Select the product SN you wish to order");
+            // System.out.println("Select the product SN you wish to order");
             while (rs.next()) {
                 String _name = rs.getString("name");
                 String str = i + "," + _name;
-                System.out.println("Product SN: " + i + "  Name: " + _name);
+                // System.out.println("Product SN: " + i + " Name: " + _name);
                 lists.add(Arrays.asList(str.split(",")));
                 i++;
             }

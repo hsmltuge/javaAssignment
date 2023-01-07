@@ -27,7 +27,7 @@ public class Consumer {
                 String _dob = rs.getString("dob");
                 String _gender = rs.getString("gender");
                 String str = _id + "," + _name + "," + _address + "," + _dob + "," + _gender;
-                System.out.println("Consumer SN: " + _id + "  Name: " + _name);
+                // System.out.println("Consumer SN: " + _id + " Name: " + _name);
                 lists.add(Arrays.asList(str.split(",")));
             }
             return lists;
