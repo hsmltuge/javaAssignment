@@ -1,5 +1,6 @@
 package GloryJohnson;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -30,6 +31,7 @@ public class Retailer {
                 String _quantity = rs.getString("quantity");
                 String _price = rs.getString("price");
                 String str = _rid + "," + _pid + "," + _name + "," + _delivery + "," + _quantity + "," + _price;
+
                 lists.add(Arrays.asList(str.split(",")));
             }
             return lists;
@@ -40,7 +42,7 @@ public class Retailer {
     }
 
     public List<List<String>> requestOffer(List<List<String>> listOfRetailers, int[] price, boolean delivery,
-            int quality) {
+            int quality, int trxOffer) {
         List<List<String>> lists = new LinkedList<>();
         try {
             for (List<String> lst : listOfRetailers) {
@@ -61,9 +63,17 @@ public class Retailer {
                     continue;
                 if (Integer.parseInt(_quantity) < quality)
                     continue;
-                System.out.println(deliv + " | " + delivery + " - " + _delivery);
-                System.out.println(_name + " " + _delivery + " " + delivery + " [" + _price + "=" + price[0] + " - "
-                        + price[1] + "] " + _quantity + " " + quality);
+                System.out.println("\n.................................................");
+                System.out.println(_name.toUpperCase() + " offer:".toUpperCase());
+                System.out.println("Delivery: Offer - " + deliv + " | Request - " + delivery);
+                System.out.println("Price: Offer - " + _price + " | Request - " + price[0] + " to " + price[1]);
+                System.out.println("Quantity: Available - " + _quantity + " | Request " + quality);
+                System.out.println(".................................................\n");
+                String str = _rid + "," + _pid + "," + _name + "," + _delivery + "," + _quantity + "," + _price;
+                lists.add(Arrays.asList(str.split(",")));
+                this.db.query("INSERT INTO trxOffer (trxid,rid,pid,name,delivery,quantity,price) VALUES ('" + trxOffer
+                        + "','" + _rid + "','" + _pid + "','" + _name + "','" + _delivery + "','" + _quantity + "','"
+                        + _price + "')");
             }
             return lists;
         } catch (Exception e) {

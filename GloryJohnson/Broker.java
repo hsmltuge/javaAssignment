@@ -1,5 +1,6 @@
 package GloryJohnson;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -54,9 +55,16 @@ public class Broker {
             System.out.println("Total Retailers: " + getRetailers.size());
             // request an offer from the retailer
             int[] price = new int[] { minPrice, maxPrice };
-            retailer.requestOffer(getRetailers, price, products.delivery, products.quality);
+            int trxOffer = rand.nextInt(536871066);
+            List<List<String>> offersList = retailer.requestOffer(getRetailers, price, products.delivery,
+                    products.quality, trxOffer);
+            if (offersList.size() > 0) {
+                for (List<String> list : offersList) {
 
-            // scan.close();
+                }
+            } else {
+                System.out.println("Sorry no offer at the moment please try again");
+            }
         }
 
     }

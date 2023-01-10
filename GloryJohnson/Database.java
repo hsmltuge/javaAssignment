@@ -2,6 +2,7 @@ package GloryJohnson;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -13,7 +14,6 @@ public class Database {
             if (this.c == null) {
                 Class.forName("org.sqlite.JDBC");
                 this.c = DriverManager.getConnection("jdbc:sqlite:test.db");
-                this.c.setAutoCommit(false);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -33,8 +33,11 @@ public class Database {
 
     public Boolean query(String sql) {
         try {
+            System.out.println(sql);
+            this.c.setAutoCommit(false);
             Statement stmt = this.c.createStatement();
             stmt.executeUpdate(sql);
+            this.c.commit();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
