@@ -33,7 +33,6 @@ public class Database {
 
     public Boolean query(String sql) {
         try {
-            System.out.println(sql);
             this.c.setAutoCommit(false);
             Statement stmt = this.c.createStatement();
             stmt.executeUpdate(sql);

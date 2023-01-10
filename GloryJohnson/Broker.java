@@ -64,9 +64,9 @@ public class Broker {
                     products.quality, trxOffer);
             if (offersList.size() > 0) {
                 List<List<String>> offerResponse = offerResponse(trxOffer);
-                consumer.offerResponse(offersList, trxOffer);
+                consumer.offerResponse(offerResponse, trxOffer);
             } else {
-                System.out.println("Sorry no offer at the moment please try again");
+                System.out.println("Sorry no offer from Retailer at the moment please try again");
             }
         }
 
@@ -77,7 +77,7 @@ public class Broker {
         List<List<String>> lists = new LinkedList<>();
         try {
             String sql = String.format(
-                    "SELECT * FROM trxOffer WHERE trxid LIKE '%s' ORDER BY price,quantity",
+                    "SELECT * FROM trxOffer WHERE trxid LIKE '%s' ORDER BY price,quantity ASC",
                     trxId);
             ResultSet rs = db.select(sql);
             while (rs.next()) {

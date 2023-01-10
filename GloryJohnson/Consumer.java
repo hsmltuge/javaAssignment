@@ -67,13 +67,15 @@ public class Consumer {
                         System.out.println("\n.................................................");
                         System.out.println("accept offer from".toUpperCase() + " " + _name.toUpperCase());
                         System.out.println(".................................................\n");
+                        break;
                     }
                 }
-                Database db = new Database();
-                db.delete(trxId);
+
             } else {
                 System.out.println("Sorry consumer rejected the offer");
             }
+            Database db = new Database();
+            db.delete(trxId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
