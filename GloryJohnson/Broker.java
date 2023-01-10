@@ -1,10 +1,14 @@
 package GloryJohnson;
 
+import java.sql.ResultSet;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 public class Broker {
+
     public static void main(String[] args) {
         // instantiate the consumer class
         Consumer consumer = new Consumer();
@@ -59,13 +63,38 @@ public class Broker {
             List<List<String>> offersList = retailer.requestOffer(getRetailers, price, products.delivery,
                     products.quality, trxOffer);
             if (offersList.size() > 0) {
-                for (List<String> list : offersList) {
-
-                }
+                List<List<String>> offerResponse = offerResponse(trxOffer);
+                consumer.offerResponse(offersList, trxOffer);
             } else {
                 System.out.println("Sorry no offer at the moment please try again");
             }
         }
 
+    }
+
+    private static List<List<String>> offerResponse(int trxId) {
+        Database db = new Database();
+        List<List<String>> lists = new LinkedList<>();
+        try {
+            String sql = String.format(
+                    "SELECT * FROM trxOffer WHERE trxid LIKE '%s' ORDER BY price,quantity",
+                    trxId);
+            ResultSet rs = db.select(sql);
+            while (rs.next()) {
+                String _rid = rs.getString("rid");
+                String _pid = rs.getString("pid");
+                String _name = rs.getString("name");
+                String _delivery = rs.getString("delivery");
+                String _quantity = rs.getString("quantity");
+                String _price = rs.getString("price");
+                String str = _rid + "," + _pid + "," + _name + "," + _delivery + "," + _quantity + "," + _price;
+
+                lists.add(Arrays.asList(str.split(",")));
+            }
+            return lists;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lists;
     }
 }

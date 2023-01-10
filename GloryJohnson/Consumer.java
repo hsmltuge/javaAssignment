@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class Consumer {
 
@@ -51,5 +52,31 @@ public class Consumer {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void offerResponse(List<List<String>> offers, int trxId) {
+        try {
+            Random rand = new Random();
+            Boolean acceptOffer = rand.nextBoolean();
+            if (acceptOffer) {
+                int accepts = rand.nextInt(offers.size());
+                int i = 1;
+                for (List<String> list : offers) {
+                    if (i == accepts) {
+                        String _name = (String) list.toArray()[2];
+                        System.out.println("\n.................................................");
+                        System.out.println("accept offer from".toUpperCase() + " " + _name.toUpperCase());
+                        System.out.println(".................................................\n");
+                    }
+                }
+                Database db = new Database();
+                db.delete(trxId);
+            } else {
+                System.out.println("Sorry consumer rejected the offer");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }

@@ -44,4 +44,18 @@ public class Database {
         }
         return true;
     }
+
+    public Boolean delete(int trxId) {
+        try {
+            this.c.setAutoCommit(false);
+            Statement stmt = this.c.createStatement();
+            String sql = String.format("DELETE FROM trxOffer WHERE trxid LIKE '%s'", trxId);
+            stmt.executeUpdate(sql);
+            this.c.commit();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
+    }
 }
